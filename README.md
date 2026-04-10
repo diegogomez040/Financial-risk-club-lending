@@ -61,7 +61,7 @@ Raw CSV (2.26M rows, 151 cols, 5.9 GB)
                                       │
                           ┌───────────▼──────────────┐
                           │  Stage 4 — Power BI       │
-                          │  powerbi/                 │
+                          │  power_BI/                │
                           │  04_powerbi_report.pbix   │
                           │                           │
                           │  4-page interactive       │
@@ -83,7 +83,7 @@ Financial-risk-club-lending/
 │   ├── 01_data_cleaning.ipynb         # Stage 1 — Data cleaning & feature engineering
 │   ├── 02_sql_analysis.ipynb          # Stage 2 — SQL business queries (10 queries)
 │   └── 03_eda.ipynb                   # Stage 3 — Exploratory data analysis
-└── powerbi/
+└── power_BI/
     └── 04_powerbi_report.pbix         # Stage 4 — 4-page interactive dashboard
 ```
 
@@ -112,7 +112,7 @@ Execute notebooks in order:
 1. notebooks/01_data_cleaning.ipynb   → produces data/cleaned_data.db + data/cleaned_data.csv
 2. notebooks/02_sql_analysis.ipynb    → business queries on cleaned_data.db
 3. notebooks/03_eda.ipynb             → visualizations on cleaned_data.csv
-4. powerbi/04_powerbi_report.pbix     → open in Power BI Desktop, connect to cleaned_data.db
+4. power_BI/04_powerbi_report.pbix    → open in Power BI Desktop, connect to cleaned_data.db
 ```
 
 ---
@@ -159,7 +159,7 @@ Transforms the raw 5.9 GB dataset into a clean, analysis-ready 90 MB file.
 | By loan term | 36-month: 17.2% vs 60-month: 34.6% |
 | By DTI band | 16.4% (Low) → 31.1% (Very High) |
 | By issue year — volume | Portfolio peaked at 377K loans in 2015 |
-| By issue year — profit | 2013 golden vintage ($1,926/loan) → 2017 loss (−$1,635/loan) |
+| By issue year — profit | 2013 golden vintage (+$1,926/loan) → 2016 turn (−$311/loan) → 2018 collapse (−$3,283/loan) |
 
 ---
 
@@ -195,7 +195,7 @@ Visual exploration of the cleaned dataset with matplotlib and seaborn.
 | Finding | Detail |
 |---------|--------|
 | **1 in 5 loans defaults** | 21.47% portfolio default rate across 1.37M loans |
-| **Returns peaked then collapsed** | Return rate hit +10% in 2013 and fell to −22% by 2018 |
+| **Returns peaked then collapsed** | Return rate peaked at +13.09% in 2013 and collapsed to −21.53% by 2018 |
 | **Grade is the top predictor** | A: 6.7% → G: 51.4% default rate |
 | **60-month loans are 2× riskier** | 34.6% vs 17.2% default rate |
 | **Debt consolidation sustains the portfolio** | Only profitable purpose — every other purpose loses money |
